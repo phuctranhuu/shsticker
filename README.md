@@ -9,3 +9,4 @@ This is library support sticker view in android.
   + Recycler View.
   + Databinding.
   + Handler, Thread.
+  + OnTouchEvent.
