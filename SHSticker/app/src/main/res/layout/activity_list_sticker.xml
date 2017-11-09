@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="event"
+            type="sticker.stdiohue.com.shsticker.eventhandlers.ListStickerActivityEH"/>
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_linearlayout_normal"
+            android:background="@color/colorBlueLight">
+            <ImageView
+                android:onClick="@{()->event.onBackClick()}"
+                android:padding="@dimen/space_large"
+                android:src="@drawable/ic_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:gravity="center"
+                android:textSize="@dimen/text_size_x_large"
+                android:textColor="@android:color/white"
+                android:text="@string/list_sticker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_sticker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</layout>

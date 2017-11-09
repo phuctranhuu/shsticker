@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="event"
+            type="sticker.stdiohue.com.shsticker.eventhandlers.ItemStickerEH"/>
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:onClick="@{()->event.onItemClick()}"
+            android:id="@+id/iv_sticker"
+            android:scaleType="fitCenter"
+            android:layout_width="@dimen/width_image_view_normal"
+            android:layout_height="@dimen/height_image_view_normal"
+            android:layout_margin="@dimen/space_normal" />
+
+    </LinearLayout>
+</layout>

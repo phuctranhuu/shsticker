@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SHSticker View</string>
+    <string name="preview">Preview</string>
+    <string name="list_sticker">List Sticker</string>
+</resources>

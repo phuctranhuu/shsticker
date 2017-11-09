@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="event"
+            type="sticker.stdiohue.com.shsticker.eventhandlers.PreviewActivityEH"/>
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_linearlayout_normal"
+            android:background="@color/colorBlueLight">
+            <ImageView
+                android:onClick="@{()->event.onBackClick()}"
+                android:padding="@dimen/space_large"
+                android:src="@drawable/ic_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:gravity="center"
+                android:textSize="@dimen/text_size_x_large"
+                android:textColor="@android:color/white"
+                android:text="@string/preview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/iv_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</layout>

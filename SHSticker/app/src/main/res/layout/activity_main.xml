@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="event"
+            type="sticker.stdiohue.com.shsticker.eventhandlers.MainActivityEH" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_linearlayout_normal"
+            android:background="@color/colorBlueLight"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_add_sticker"
+                android:layout_width="@dimen/width_image_view_small"
+                android:layout_height="@dimen/height_image_view_small"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_tag_faces_white_48dp"
+                android:onClick="@{()->event.onShowListStickerClick()}"
+                android:padding="@dimen/space_normal" />
+
+            <TextView
+                android:id="@+id/tv_generate_preview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/space_xx_large"
+                android:gravity="center"
+                android:onClick="@{()->event.onShowPreviewClick()}"
+                android:paddingLeft="@dimen/space_normal"
+                android:paddingRight="@dimen/space_normal"
+                android:text="@string/preview"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <shsticker.StickerLayout
+            android:id="@+id/sticker_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</layout>
